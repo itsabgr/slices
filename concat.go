@@ -1,6 +1,6 @@
 package slices
 
-func Concat[T ~[]E, E any](slice ...[]T) []T {
+func Concat[T any](slice ...[]T) []T {
 	length := Len(slice)
 	if length == 0 {
 		return nil

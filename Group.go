@@ -1,6 +1,6 @@
 package slices
 
-func Group[T ~[]E, G comparable, E any](fn func(T) G, slice ...T) map[G][]T {
+func Group[T any, G comparable](fn func(T) G, slice ...T) map[G][]T {
 	_map := make(map[G][]T)
 	for _, item := range slice {
 		g := fn(item)

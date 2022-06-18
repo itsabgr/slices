@@ -1,6 +1,6 @@
 package slices
 
-func Fill[T ~[]E, E any](item T, slice ...T) []T {
+func Fill[T any](item T, slice ...T) []T {
 	for i := range slice {
 		slice[i] = item
 	}

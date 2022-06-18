@@ -1,6 +1,6 @@
 package slices
 
-func Chunk[T ~[]E, E any](size int, slice ...T) [][]T {
+func Chunk[T any](size int, slice ...T) [][]T {
 	var chunks [][]T
 	for i := 0; i < len(slice); i += size {
 		end := i + size
