@@ -1,6 +1,6 @@
 package slices
 
-func Sort[T any](fn func(a, b T) bool, array ...T) {
+func Sort[T any](fn func(a, b T) bool, array ...T) []T {
 	var n = len(array)
 	for i := 1; i < n; i++ {
 		j := i
@@ -11,4 +11,5 @@ func Sort[T any](fn func(a, b T) bool, array ...T) {
 			j = j - 1
 		}
 	}
+	return array
 }
